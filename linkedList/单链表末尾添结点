@@ -1,0 +1,43 @@
+C语言代码实现：
+struct ListNode
+{
+  int m_nValue;
+  ListNode* m_pNext;
+}
+void addToTail(ListNode** pHead,int value){
+/*使用指针的指针，因新插入的指针作为头指针，指针会变*/
+  ListNode* pNew=new ListNode();
+  pNew->m_nValue=value;
+  pNew->m_pNext=Null;
+  if(*pHead==Null){
+  *pHead=pNew;
+  }else{
+    ListNode*pNode=*pHead;
+    while(pNode->m_pNext!=NULL){
+      pNode=pNode->m_pNext;
+      pNode->m_pNext=pNew;
+    }
+  }
+}
+使用JavaScript代码实现:
+'use strict'
+function LinkedList(){
+var Node=function(ele){
+this.element=ele;
+this.next=null;
+};
+this.length=0;
+this.head=null;
+this.append=function(ele){
+var node=new Node(ele),current;
+if(this.head=null){
+  this.head=node;
+}else{
+current=this.head;
+while(current.next){
+current.next=node;
+}
+this.length++;
+}
+}
+}
