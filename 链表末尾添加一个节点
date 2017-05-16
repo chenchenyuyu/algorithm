@@ -5,6 +5,7 @@ struct ListNode
   ListNode* m_pNext;
 }
 void addToTail(ListNode** pHead,int value){
+/*使用指针的指针，因新插入的指针作为头指针，指针会变*/
   ListNode* pNew=new ListNode();
   pNew->m_nValue=value;
   pNew->m_pNext=Null;
